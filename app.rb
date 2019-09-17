@@ -33,5 +33,7 @@ else
   params[:operation] == quotient
    @quotient= params[:number1].to_i / params[:number2].to_i
   @quotient.to_s
+end
+
 
 end
