@@ -19,21 +19,21 @@ get '/say/:word1/:word2/:word3/:word4/:word5' do
   "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
 end
 
-get '/:operation/:number1/:number2' do
-if params[:operation] == add
-  @sum = params[:number1].to_i + params[:number2].to_i
-  @sum.to_s
-  elsif params[:operation] == subtract
-  @difference = params[:number1].to_i - params[:number2].to_i
-  @difference.to_s
-  elsif params[:operation] == product
-   @product = params[:number1].to_i * params[:number2].to_i
-  @product.to_s
-else 
-  params[:operation] == quotient
-   @quotient= params[:number1].to_i / params[:number2].to_i
-  @quotient.to_s
+get "/:operation/:number1/:number2" do
+    @operation = params[:operation]
+    if @operation == "add"
+      @sum = params[:number1].to_i + params[:number2].to_i
+      "#{@sum}"
+    elsif @operation == "subtract"
+      @difference = params[:number1].to_i - params[:number2].to_i
+      "#{@difference}"
+    elsif @operation == "multiply"
+      @product = params[:number1].to_i * params[:number2].to_i
+      "#{@product}"
+    elsif @operation == "divide"
+      @quotient = params[:number1].to_i / params[:number2].to_i
+      "#{@quotient}"
+    end
+  end
 end
 
-
-end
