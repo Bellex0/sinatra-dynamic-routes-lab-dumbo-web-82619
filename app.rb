@@ -10,6 +10,7 @@ end
   (params[:number].to_i ** 2).to_s
 end
 
-get 
+ get '/say/:number/:phrase' do
+   params[:phrase] * [:number]
 
 end
