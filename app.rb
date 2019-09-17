@@ -15,6 +15,7 @@ end
     "#{@phrase}"
 end
 
-get 
+get '/:operation/:number1/:number2'
+params[:operation]
 
 end
