@@ -11,6 +11,8 @@ end
 end
 
  get '/say/:number/:phrase' do
-   params[:phrase] * [:number]
+   (params[:number].to_i).times do
+  puts params[:phrase]
+end
 
 end
