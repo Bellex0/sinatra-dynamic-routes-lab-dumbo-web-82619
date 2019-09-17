@@ -7,8 +7,9 @@ class App < Sinatra::Base
 end
 
   get '/square/:number' do
-  @answer = params[:number].to_i **2
-  "@answer.to_s
+  (params[:number].to_i ** 2).to_s
 end
+
+get 
 
 end
