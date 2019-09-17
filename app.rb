@@ -8,7 +8,7 @@ end
 
   get '/square/:number' do
   @answer = params[:number].to_i **2
- return  @answer.to_s
+  @answer.to_s
 end
 
 end
